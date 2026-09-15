@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -ux # Intentionally leave failures, sometimes the user may already have one of these blocked.
 
+# This script blocks known agent users.
+
 GH_CLI="gh"
 
 if ! hash "$GH_CLI"
