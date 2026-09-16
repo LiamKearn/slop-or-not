@@ -30,19 +30,21 @@ then
     exit 1
 fi
 
+export GH_PAGER=""
+
 # BEGIN GENERATED
-GH_PAGER="" gh api --method PUT /user/blocks/claude
-GH_PAGER="" gh api --method PUT /user/blocks/cursoragent
-GH_PAGER="" gh api --method PUT /user/blocks/codex
-GH_PAGER="" gh api --method PUT /user/blocks/ampagent
-GH_PAGER="" gh api --method PUT /user/blocks/blackboxaicode
-GH_PAGER="" gh api --method PUT /user/blocks/ellipsis-agent
-GH_PAGER="" gh api --method PUT /user/blocks/Auto-GPT-Bot
-GH_PAGER="" gh api --method PUT /user/blocks/openhands-agent
-GH_PAGER="" gh api --method PUT /user/blocks/careerops-ledger
-GH_PAGER="" gh api --method PUT /user/blocks/compozybot
-GH_PAGER="" gh api --method PUT /user/blocks/ouroboros-agent
-GH_PAGER="" gh api --method PUT /user/blocks/leeroo-coder
-GH_PAGER="" gh api --method PUT /user/blocks/InsightFactoryAPP
-GH_PAGER="" gh api --method PUT /user/blocks/Orkas-AI
+gh api --method PUT /user/blocks/claude
+gh api --method PUT /user/blocks/cursoragent
+gh api --method PUT /user/blocks/codex
+gh api --method PUT /user/blocks/ampagent
+gh api --method PUT /user/blocks/blackboxaicode
+gh api --method PUT /user/blocks/ellipsis-agent
+gh api --method PUT /user/blocks/Auto-GPT-Bot
+gh api --method PUT /user/blocks/openhands-agent
+gh api --method PUT /user/blocks/careerops-ledger
+gh api --method PUT /user/blocks/compozybot
+gh api --method PUT /user/blocks/ouroboros-agent
+gh api --method PUT /user/blocks/leeroo-coder
+gh api --method PUT /user/blocks/InsightFactoryAPP
+gh api --method PUT /user/blocks/Orkas-AI
 # END GENERATED

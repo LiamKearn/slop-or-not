@@ -40,11 +40,13 @@ then
     exit 1
 fi
 
+export GH_PAGER=""
+
 # BEGIN GENERATED
 BASH
     while read -r LINE; do
         [[ "${LINE}" = "#"* ]] && continue
-        printf "GH_PAGER=\"\" gh api --method PUT /user/blocks/%s\n" "${LINE}"
+        printf "gh api --method PUT /user/blocks/%s\n" "${LINE}"
     done < "${USER_LIST}"
     printf "# END GENERATED\n"
 } > "${OUTPUT_FILE_NAME}"
