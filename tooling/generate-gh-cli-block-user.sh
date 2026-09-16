@@ -3,8 +3,8 @@ set -eux
 
 # This script generates a script to block the list of agent users.
 
-USER_LIST="github-users-list"
-OUTPUT_FILE_NAME="gh-cli-block-user.bash"
+USER_LIST="../github-users-list"
+OUTPUT_FILE_NAME="../gh-cli-block-user.bash"
 
 {
     cat <<'BASH'
