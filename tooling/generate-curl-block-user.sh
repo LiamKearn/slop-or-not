@@ -26,27 +26,27 @@ then
     exit 1
 fi
 
-if [[ ! -v AUTH_TOKEN ]] || [[ -z "$AUTH_TOKEN" ]];
+if [[ ! -v AUTH_TOKEN ]] || [[ -z "${AUTH_TOKEN}" ]];
 then
     printf "To authorize your account you will an access token with the user scope\n"
     printf "You can generate one here: https://github.com/settings/personal-access-tokens/new\n"
     printf "Grant it the 'Block another user' permission *ensuring* to select read *and* write\n"
     eof_safe_read "Enter your Authorization Token: " AUTH_TOKEN
-    [[ -z "$AUTH_TOKEN" ]] && printf "A AUTH_TOKEN must be supplied\n" && exit 1
+    [[ -z "${AUTH_TOKEN}" ]] && printf "A AUTH_TOKEN must be supplied\n" && exit 1
 fi
 
 # BEGIN GENERATED
 BASH
     while read -r LINE; do
-        [[ "$LINE" = "#"* ]] && continue
+        [[ "${LINE}" = "#"* ]] && continue
         cat <<BASH
-curl -X PUT https://api.github.com/user/blocks/$LINE \\
+curl -X PUT https://api.github.com/user/blocks/${LINE} \\
   -H "Accept: application/vnd.github+json" \\
-  -H "Authorization: Bearer \$AUTH_TOKEN" \\
+  -H "Authorization: Bearer \${AUTH_TOKEN}" \\
   -H "X-GitHub-Api-Version: 2026-03-10" \\
   -L
 BASH
-    done < "$USER_LIST"
+    done < "${USER_LIST}"
     printf "# END GENERATED\n"
-} > "$OUTPUT_FILE_NAME"
+} > "${OUTPUT_FILE_NAME}"
 
