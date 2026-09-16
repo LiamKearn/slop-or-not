@@ -9,7 +9,7 @@ OUTPUT_FILE_NAME="gh-cli-block-user.bash"
 {
     cat <<'BASH'
 #!/usr/bin/env bash
-set -ux # Intentionally leave failures, sometimes the user may already have one of these blocked.
+set -eux
 
 # This script blocks known agent users using the GH CLI
 
@@ -42,6 +42,7 @@ fi
 
 export GH_PAGER=""
 
+set +e # Intentionally leave failures, sometimes the user may already have one of these blocked.
 # BEGIN GENERATED
 BASH
     while read -r LINE; do

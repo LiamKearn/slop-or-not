@@ -10,7 +10,7 @@ OUTPUT_FILE_NAME="curl-block-user.bash"
 {
     cat <<'BASH'
 #!/usr/bin/env bash
-set -ux # Intentionally leave failures, sometimes the user may already have one of these blocked.
+set -eux
 
 # This script blocks known agent users using CURL
 
@@ -35,6 +35,7 @@ then
     [[ -z "${AUTH_TOKEN}" ]] && printf "A AUTH_TOKEN must be supplied\n" && exit 1
 fi
 
+set +e # Intentionally leave failures, sometimes the user may already have one of these blocked.
 # BEGIN GENERATED
 BASH
     while read -r LINE; do

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -ux # Intentionally leave failures, sometimes the user may already have one of these blocked.
+set -eux
 
 # This script blocks known agent users using the GH CLI
 
@@ -32,6 +32,7 @@ fi
 
 export GH_PAGER=""
 
+set +e # Intentionally leave failures, sometimes the user may already have one of these blocked.
 # BEGIN GENERATED
 gh api --method PUT /user/blocks/claude
 gh api --method PUT /user/blocks/cursoragent
