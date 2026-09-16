@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 set -eux
 
-# This script generates a script to block the list of agent users.
+# This script generates a script which uses the Github CLI to block the list of agent users.
 
-USER_LIST="../github-users-list"
-OUTPUT_FILE_NAME="../gh-cli-block-user.bash"
+USER_LIST="github-users-list"
+OUTPUT_FILE_NAME="gh-cli-block-user.bash"
 
 {
     cat <<'BASH'
 #!/usr/bin/env bash
 set -ux # Intentionally leave failures, sometimes the user may already have one of these blocked.
 
-# This script blocks known agent users.
+# This script blocks known agent users using the GH CLI
 
 GH_CLI="gh"
 
