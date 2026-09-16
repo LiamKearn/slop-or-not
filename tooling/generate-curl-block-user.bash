@@ -6,7 +6,6 @@ set -eux
 USER_LIST="github-users-list"
 OUTPUT_FILE_NAME="curl-block-user.bash"
 
-
 {
     cat <<'BASH'
 #!/usr/bin/env bash
