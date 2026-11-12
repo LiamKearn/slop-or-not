@@ -48,4 +48,5 @@ gh api --method PUT /user/blocks/ouroboros-agent
 gh api --method PUT /user/blocks/leeroo-coder
 gh api --method PUT /user/blocks/InsightFactoryAPP
 gh api --method PUT /user/blocks/Orkas-AI
+gh api --method PUT /user/blocks/mistral-vibe
 # END GENERATED

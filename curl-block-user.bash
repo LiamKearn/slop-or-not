@@ -96,4 +96,9 @@ curl -X PUT https://api.github.com/user/blocks/Orkas-AI \
   -H "Authorization: Bearer ${AUTH_TOKEN}" \
   -H "X-GitHub-Api-Version: 2026-03-10" \
   -L
+curl -X PUT https://api.github.com/user/blocks/mistral-vibe \
+  -H "Accept: application/vnd.github+json" \
+  -H "Authorization: Bearer ${AUTH_TOKEN}" \
+  -H "X-GitHub-Api-Version: 2026-03-10" \
+  -L
 # END GENERATED
